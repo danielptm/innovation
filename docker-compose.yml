@@ -1,0 +1,16 @@
+version: '3'
+services:
+  innovation:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - localstack
+    links:
+    - localstack
+  localstack:
+    image: localstack/localstack
+    ports:
+    - "4567-4584:4567-4584"
+    environment:
+    - SERVICES=s3:4572,sns:4575,sqs:4576
