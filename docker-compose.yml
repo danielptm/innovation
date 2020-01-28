@@ -1,7 +1,7 @@
 version: '3'
 services:
   innovation:
-    build: .
+    image: innovation
     ports:
       - "8080:8080"
     depends_on:
