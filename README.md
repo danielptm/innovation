@@ -1,8 +1,13 @@
-#### How to start the project
-1. Run `docker-compose up`
-2. In a different terminal window cd to the `terraform/local` folder
-3. Run `terraform init`
-4.  To run terraform: `terraform apply`
+### How to start the project
+Run `docker build . --tag innovation`
+Run `docker-compose up`
+
+###### What's happening now?
+After running `docker-compose up` what happens is this:
+1. The docker images will be downloaded and built, specifically localstack is downloaded, and the docker image for this project is built.
+2. Then docker-compose spins up these containers together. When this container starts up it runs a bashscript which creates the terraform resrouces in localstack, and then starts up this application's jar.
+
+
 
 
 #### Gradle issues?
