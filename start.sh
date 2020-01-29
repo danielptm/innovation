@@ -3,5 +3,5 @@ terraform -v
 sleep 25s
 cd terraform/local
 terraform init
-terraform apply -input=false
+terraform apply -auto-approve
 #java -jar innovation.jar
